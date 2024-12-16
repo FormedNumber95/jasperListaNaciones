@@ -13,6 +13,7 @@
 			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
+	<parameter name="IMAGE_PATH" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT id,
 	pais,
@@ -48,7 +49,7 @@ ORDER BY paises.pais.id ASC]]>
 		<band height="136" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="-1" width="138" height="116" uuid="ddc15723-2728-421f-b95e-2df9faf64ce1"/>
-				<imageExpression><![CDATA["naciones.png"]]></imageExpression>
+				<imageExpression><![CDATA[$P{IMAGE_PATH}+"naciones.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement style="Title" x="180" y="0" width="263" height="62" uuid="1a652692-054a-40f3-ade5-68d8da36626d"/>
@@ -71,7 +72,7 @@ ORDER BY paises.pais.id ASC]]>
 			</staticText>
 			<image>
 				<reportElement x="450" y="0" width="115" height="114" uuid="5d64e5b3-07bb-48ab-89dc-15c0c46bb19a"/>
-				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+				<imageExpression><![CDATA[$P{IMAGE_PATH}+"coffee_stain.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>
